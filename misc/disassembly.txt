@@ -1,0 +1,1819 @@
+Disassembly of <func @__main__, file "main.ql", line 1>
+1          0    LoadConst       0    (3.14159265359)
+           3    DefineGlobal    0    (PI)
+
+2          6    LoadConst       1    (0.0001)
+           9    DefineGlobal    1    (EPSILON)
+
+3          12   LoadConst       2    (9223372036854776000)
+           15   LoadConst       2    (9223372036854776000)
+           18   BinaryPower          (**)
+           19   DefineGlobal    2    (INF)
+           22   LoadNone             (none)
+           23   Pop                  
+
+2          24   CreateFunction  3    (<func vec3, file "vec3.ql", line 2>)
+           27   DefineGlobal    3    (vec3)
+
+3          30   CreateFunction  4    (<func vec3_zero, file "vec3.ql", line 3>)
+           33   DefineGlobal    4    (vec3_zero)
+
+4          36   CreateFunction  5    (<func vec3_from_color, file "vec3.ql", line 4>)
+           39   DefineGlobal    5    (vec3_from_color)
+
+5          42   CreateFunction  6    (<func vec3_to_color, file "vec3.ql", line 5>)
+           45   DefineGlobal    7    (vec3_to_color)
+
+8          48   CreateFunction  7    (<func vec3_add, file "vec3.ql", line 8>)
+           51   DefineGlobal    8    (vec3_add)
+
+9          54   CreateFunction  8    (<func vec3_sub, file "vec3.ql", line 9>)
+           57   DefineGlobal    9    (vec3_sub)
+
+10         60   CreateFunction  9    (<func vec3_mul, file "vec3.ql", line 10>)
+           63   DefineGlobal    10   (vec3_mul)
+
+11         66   CreateFunction  10   (<func vec3_div, file "vec3.ql", line 11>)
+           69   DefineGlobal    11   (vec3_div)
+
+12         72   CreateFunction  11   (<func vec3_neg, file "vec3.ql", line 12>)
+           75   DefineGlobal    12   (vec3_neg)
+
+14         78   CreateFunction  12   (<func vec3_add_scalar, file "vec3.ql", line 14>)
+           81   DefineGlobal    13   (vec3_add_scalar)
+
+15         84   CreateFunction  13   (<func vec3_mul_scalar, file "vec3.ql", line 15>)
+           87   DefineGlobal    14   (vec3_mul_scalar)
+
+19         90   CreateFunction  14   (<func vec3_dot, file "vec3.ql", line 19>)
+           93   DefineGlobal    15   (vec3_dot)
+
+21         96   CreateFunction  15   (<func vec3_norm, file "vec3.ql", line 21>)
+           99   DefineGlobal    16   (vec3_norm)
+
+22         102  CreateFunction  16   (<func vec3_length, file "vec3.ql", line 22>)
+           105  DefineGlobal    18   (vec3_length)
+
+23         108  CreateFunction  17   (<func vec3_normalize, file "vec3.ql", line 23>)
+           111  DefineGlobal    19   (vec3_normalize)
+           114  LoadNone             (none)
+           115  Pop                  
+
+3          116  LoadConst       18   (0)
+           119  DefineGlobal    20   (RAY_ORIGIN)
+
+4          122  LoadConst       19   (1)
+           125  DefineGlobal    21   (RAY_DIRECTION)
+
+6          128  CreateFunction  20   (<func ray, file "ray.ql", line 6>)
+           131  DefineGlobal    22   (ray)
+
+10         134  CreateFunction  21   (<func to_rad, file "ray.ql", line 10>)
+           137  DefineGlobal    23   (to_rad)
+
+14         140  CreateFunction  22   (<func prime_ray, file "ray.ql", line 14>)
+           143  DefineGlobal    24   (prime_ray)
+
+25         146  CreateFunction  23   (<func ray_at, file "ray.ql", line 25>)
+           149  DefineGlobal    25   (ray_at)
+
+29         152  CreateFunction  24   (<func ray_reflection, file "ray.ql", line 29>)
+           155  DefineGlobal    26   (ray_reflection)
+           158  LoadNone             (none)
+           159  Pop                  
+
+3          160  LoadConst       25   ([0, 1, 2, 3, 4])
+           163  Unpack          5    
+           165  DefineGlobal    27   (MAT_ALBEDO)
+           168  DefineGlobal    28   (MAT_REFLECTIVITY)
+           171  DefineGlobal    29   (MAT_COLOR)
+           174  DefineGlobal    30   (MAT_PHONG_N)
+           177  DefineGlobal    31   (MAT_PHONG_KS)
+
+5          180  CreateFunction  26   (<func material, file "material.ql", line 5>)
+           183  DefineGlobal    32   (material)
+
+10         186  CreateFunction  27   (<func shiny_material, file "material.ql", line 10>)
+           189  DefineGlobal    33   (shiny_material)
+
+14         192  CreateFunction  28   (<func matte_material, file "material.ql", line 14>)
+           195  DefineGlobal    34   (matte_material)
+           198  LoadNone             (none)
+           199  Pop                  
+
+3          200  LoadConst       18   (0)
+           203  DefineGlobal    35   (OBJ_TYPE)
+
+4          206  LoadConst       19   (1)
+           209  DefineGlobal    36   (OBJ_ORIGIN)
+
+5          212  LoadConst       29   ((2, 2))
+           215  Unpack          2    
+           217  DefineGlobal    37   (OBJ_NORMAL)
+           220  DefineGlobal    38   (OBJ_RADIUS)
+
+6          223  LoadConst       30   (3)
+           226  DefineGlobal    39   (OBJ_MATERIAL)
+
+8          229  LoadConst       18   (0)
+           232  DefineGlobal    40   (SPHERE)
+
+9          235  LoadConst       19   (1)
+           238  DefineGlobal    41   (PLANE)
+
+12         241  CreateFunction  31   (<func sphere, file "object.ql", line 12>)
+           244  DefineGlobal    42   (sphere)
+
+16         247  CreateFunction  32   (<func plane, file "object.ql", line 16>)
+           250  DefineGlobal    43   (plane)
+
+20         253  CreateFunction  33   (<func object_surface_normal, file "object.ql", line 20>)
+           256  DefineGlobal    44   (object_surface_normal)
+
+31         259  CreateFunction  34   (<func object_intersection, file "object.ql", line 31>)
+           262  DefineGlobal    45   (object_intersection)
+           265  LoadNone             (none)
+           266  Pop                  
+
+2          267  LoadConst       18   (0)
+           270  DefineGlobal    46   (LIGHT_TYPE)
+
+3          273  LoadConst       35   ((1, 1))
+           276  Unpack          2    
+           278  DefineGlobal    47   (LIGHT_DIRECTION)
+           281  DefineGlobal    48   (LIGHT_POSITION)
+
+4          284  LoadConst       36   (2)
+           287  DefineGlobal    49   (LIGHT_COLOR)
+
+5          290  LoadConst       30   (3)
+           293  DefineGlobal    50   (LIGHT_INTENSITY)
+
+7          296  LoadConst       18   (0)
+           299  DefineGlobal    51   (DIRECTIONAL)
+
+8          302  LoadConst       19   (1)
+           305  DefineGlobal    52   (SPHERICAL)
+
+10         308  CreateFunction  37   (<func directional_light, file "light.ql", line 10>)
+           311  DefineGlobal    53   (directional_light)
+
+16         314  CreateFunction  38   (<func spherical_light, file "light.ql", line 16>)
+           317  DefineGlobal    54   (spherical_light)
+
+21         320  CreateFunction  39   (<func light_relative_direction, file "light.ql", line 21>)
+           323  DefineGlobal    55   (light_relative_direction)
+
+32         326  CreateFunction  40   (<func light_intensity_at, file "light.ql", line 32>)
+           329  DefineGlobal    56   (light_intensity_at)
+
+44         332  CreateFunction  41   (<func light_relative_distance, file "light.ql", line 44>)
+           335  DefineGlobal    57   (light_relative_distance)
+           338  LoadNone             (none)
+           339  Pop                  
+
+3          340  LoadConst       42   (256)
+           343  DefineGlobal    58   (WIDTH)
+
+4          346  LoadConst       42   (256)
+           349  DefineGlobal    59   (HEIGHT)
+
+5          352  LoadGlobal      23   (to_rad)
+           355  LoadConst       43   (60)
+           358  CallFunction    1    
+           360  LoadConst       44   (2)
+           363  BinaryDivide         (/)
+           364  CallBuiltin     1    (<builtin tan>)
+           368  DefineGlobal    61   (FOV)
+
+6          371  LoadGlobal      3    (vec3)
+           374  LoadConst       45   (0)
+           377  LoadConst       45   (0)
+           380  LoadConst       45   (0)
+           383  CallFunction    3    
+           385  DefineGlobal    62   (CAMERA_POSITION)
+
+7          388  LoadConst       46   (5)
+           391  DefineGlobal    63   (MAX_DEPTH)
+
+8          394  LoadConst       47   (0.001)
+           397  DefineGlobal    64   (SHADOW_BIAS)
+
+9          400  LoadConst       48   ([])
+           403  DefineGlobal    65   (OBJECTS)
+
+10         406  LoadConst       48   ([])
+           409  DefineGlobal    66   (LIGHTS)
+
+12         412  CreateFunction  49   (<func set_dimensions, file "scene.ql", line 12>)
+           415  DefineGlobal    68   (set_dimensions)
+
+17         418  CreateFunction  50   (<func set_fov, file "scene.ql", line 17>)
+           421  DefineGlobal    69   (set_fov)
+
+21         424  CreateFunction  51   (<func set_camera_position, file "scene.ql", line 21>)
+           427  DefineGlobal    70   (set_camera_position)
+
+25         430  CreateFunction  52   (<func set_max_depth, file "scene.ql", line 25>)
+           433  DefineGlobal    72   (set_max_depth)
+
+29         436  CreateFunction  53   (<func set_shadow_bias, file "scene.ql", line 29>)
+           439  DefineGlobal    73   (set_shadow_bias)
+
+33         442  CreateFunction  54   (<func add_object, file "scene.ql", line 33>)
+           445  DefineGlobal    74   (add_object)
+
+37         448  CreateFunction  55   (<func add_light, file "scene.ql", line 37>)
+           451  DefineGlobal    75   (add_light)
+           454  LoadNone             (none)
+           455  Pop                  
+
+3          456  CreateFunction  56   (<func trace, file "rendering.ql", line 3>)
+           459  DefineGlobal    76   (trace)
+
+20         462  CreateFunction  57   (<func cast, file "rendering.ql", line 20>)
+           465  DefineGlobal    78   (cast)
+
+33         468  CreateFunction  58   (<func diffuse_shading, file "rendering.ql", line 33>)
+           471  DefineGlobal    80   (diffuse_shading)
+
+66         474  CreateFunction  59   (<func compute_color, file "rendering.ql", line 66>)
+           477  DefineGlobal    77   (compute_color)
+
+89         480  CreateFunction  60   (<func ray_trace, file "rendering.ql", line 89>)
+           483  DefineGlobal    81   (ray_trace)
+           486  LoadNone             (none)
+           487  Pop                  
+
+3          488  CreateFunction  61   (<func ppm_write_header, file "ppm.ql", line 3>)
+           491  DefineGlobal    83   (ppm_write_header)
+
+10         494  CreateFunction  62   (<func ppm_write_pixel, file "ppm.ql", line 10>)
+           497  DefineGlobal    84   (ppm_write_pixel)
+
+15         500  CreateFunction  63   (<func ppm_write_image, file "ppm.ql", line 15>)
+           503  DefineGlobal    85   (ppm_write_image)
+           506  LoadNone             (none)
+           507  Pop                  
+
+12         508  LoadConst       64   ((512, 256))
+           511  Unpack          2    
+           513  DefineGlobal    86   (width)
+           516  DefineGlobal    87   (height)
+
+14         519  LoadGlobal      68   (set_dimensions)
+           522  LoadGlobal      86   (width)
+           525  LoadGlobal      87   (height)
+           528  CallFunction    2    
+           530  Pop                  
+
+15         531  LoadGlobal      70   (set_camera_position)
+           534  LoadGlobal      3    (vec3)
+           537  LoadConst       45   (0)
+           540  LoadConst       45   (0)
+           543  LoadConst       65   (20)
+           546  CallFunction    3    
+           548  CallFunction    1    
+           550  Pop                  
+
+16         551  LoadGlobal      69   (set_fov)
+           554  LoadConst       43   (60)
+           557  CallFunction    1    
+           559  Pop                  
+
+18         560  LoadGlobal      74   (add_object)
+
+19         563  LoadGlobal      42   (sphere)
+
+20         566  LoadGlobal      3    (vec3)
+           569  LoadConst       45   (0)
+           572  LoadConst       44   (2)
+           575  LoadConst       66   (-8)
+           578  CallFunction    3    
+
+21         580  LoadConst       67   (4)
+
+22         583  LoadGlobal      32   (material)
+           586  LoadConst       68   (#ffffffff)
+           589  LoadConst       69   (0.2)
+           592  LoadConst       70   (0.9)
+           595  LoadConst       45   (0)
+           598  LoadConst       45   (0)
+           601  CallFunction    5    
+
+19         603  CallFunction    3    
+
+18         605  CallFunction    1    
+           607  Pop                  
+
+26         608  LoadGlobal      74   (add_object)
+
+27         611  LoadGlobal      43   (plane)
+
+28         614  LoadGlobal      3    (vec3)
+           617  LoadConst       45   (0)
+           620  LoadConst       71   (-4.5)
+           623  LoadConst       45   (0)
+           626  CallFunction    3    
+
+29         628  LoadGlobal      3    (vec3)
+           631  LoadConst       45   (0)
+           634  LoadConst       72   (-1)
+           637  LoadConst       45   (0)
+           640  CallFunction    3    
+
+30         642  LoadGlobal      32   (material)
+           645  LoadConst       73   (#000000ff)
+           648  LoadConst       74   (0.1)
+           651  LoadConst       70   (0.9)
+           654  LoadConst       45   (0)
+           657  LoadConst       45   (0)
+           660  CallFunction    5    
+
+27         662  CallFunction    3    
+
+26         664  CallFunction    1    
+           666  Pop                  
+
+34         667  LoadGlobal      74   (add_object)
+
+35         670  LoadGlobal      43   (plane)
+
+36         673  LoadGlobal      3    (vec3)
+           676  LoadConst       45   (0)
+           679  LoadConst       45   (0)
+           682  LoadConst       75   (-20)
+           685  CallFunction    3    
+
+37         687  LoadGlobal      3    (vec3)
+           690  LoadConst       45   (0)
+           693  LoadConst       45   (0)
+           696  LoadConst       72   (-1)
+           699  CallFunction    3    
+
+38         701  LoadGlobal      32   (material)
+           704  LoadConst       68   (#ffffffff)
+           707  LoadConst       74   (0.1)
+           710  LoadConst       76   (0.8)
+           713  LoadConst       45   (0)
+           716  LoadConst       45   (0)
+           719  CallFunction    5    
+
+35         721  CallFunction    3    
+
+34         723  CallFunction    1    
+           725  Pop                  
+
+42         726  LoadGlobal      75   (add_light)
+
+43         729  LoadGlobal      54   (spherical_light)
+
+44         732  LoadGlobal      3    (vec3)
+           735  LoadConst       77   (-30)
+           738  LoadConst       65   (20)
+           741  LoadConst       78   (-2)
+           744  CallFunction    3    
+
+45         746  LoadConst       79   (#ff0000ff)
+
+46         749  LoadConst       80   (20000)
+
+43         752  CallFunction    3    
+
+42         754  CallFunction    1    
+           756  Pop                  
+
+50         757  LoadGlobal      75   (add_light)
+
+51         760  LoadGlobal      54   (spherical_light)
+
+52         763  LoadGlobal      3    (vec3)
+           766  LoadConst       75   (-20)
+           769  LoadConst       65   (20)
+           772  LoadConst       78   (-2)
+           775  CallFunction    3    
+
+53         777  LoadConst       81   (#fc1e26ff)
+
+54         780  LoadConst       80   (20000)
+
+51         783  CallFunction    3    
+
+50         785  CallFunction    1    
+           787  Pop                  
+
+58         788  LoadGlobal      75   (add_light)
+
+59         791  LoadGlobal      54   (spherical_light)
+
+60         794  LoadGlobal      3    (vec3)
+           797  LoadConst       82   (-10)
+           800  LoadConst       65   (20)
+           803  LoadConst       78   (-2)
+           806  CallFunction    3    
+
+61         808  LoadConst       83   (#ffd640ff)
+
+62         811  LoadConst       80   (20000)
+
+59         814  CallFunction    3    
+
+58         816  CallFunction    1    
+           818  Pop                  
+
+66         819  LoadGlobal      75   (add_light)
+
+67         822  LoadGlobal      54   (spherical_light)
+
+68         825  LoadGlobal      3    (vec3)
+           828  LoadConst       45   (0)
+           831  LoadConst       65   (20)
+           834  LoadConst       78   (-2)
+           837  CallFunction    3    
+
+69         839  LoadConst       84   (#00ff00ff)
+
+70         842  LoadConst       80   (20000)
+
+67         845  CallFunction    3    
+
+66         847  CallFunction    1    
+           849  Pop                  
+
+74         850  LoadGlobal      75   (add_light)
+
+75         853  LoadGlobal      54   (spherical_light)
+
+76         856  LoadGlobal      3    (vec3)
+           859  LoadConst       85   (10)
+           862  LoadConst       65   (20)
+           865  LoadConst       78   (-2)
+           868  CallFunction    3    
+
+77         870  LoadConst       86   (#0032ffff)
+
+78         873  LoadConst       80   (20000)
+
+75         876  CallFunction    3    
+
+74         878  CallFunction    1    
+           880  Pop                  
+
+82         881  LoadGlobal      75   (add_light)
+
+83         884  LoadGlobal      54   (spherical_light)
+
+84         887  LoadGlobal      3    (vec3)
+           890  LoadConst       65   (20)
+           893  LoadConst       65   (20)
+           896  LoadConst       78   (-2)
+           899  CallFunction    3    
+
+85         901  LoadConst       87   (#bd38ffff)
+
+86         904  LoadConst       80   (20000)
+
+83         907  CallFunction    3    
+
+82         909  CallFunction    1    
+           911  Pop                  
+
+90         912  LoadGlobal      75   (add_light)
+
+91         915  LoadGlobal      54   (spherical_light)
+
+92         918  LoadGlobal      3    (vec3)
+           921  LoadConst       88   (30)
+           924  LoadConst       65   (20)
+           927  LoadConst       78   (-2)
+           930  CallFunction    3    
+
+93         932  LoadConst       89   (#ff54e8ff)
+
+94         935  LoadConst       80   (20000)
+
+91         938  CallFunction    3    
+
+90         940  CallFunction    1    
+           942  Pop                  
+
+98         943  LoadGlobal      75   (add_light)
+
+99         946  LoadGlobal      54   (spherical_light)
+
+100        949  LoadGlobal      3    (vec3)
+           952  LoadConst       45   (0)
+           955  LoadConst       88   (30)
+           958  LoadConst       90   (5)
+           961  CallFunction    3    
+
+101        963  LoadConst       68   (#ffffffff)
+
+102        966  LoadConst       91   (60000)
+
+99         969  CallFunction    3    
+
+98         971  CallFunction    1    
+           973  Pop                  
+
+106        974  LoadGlobal      75   (add_light)
+
+107        977  LoadGlobal      54   (spherical_light)
+
+108        980  LoadGlobal      3    (vec3)
+           983  LoadConst       45   (0)
+           986  LoadConst       92   (25)
+           989  LoadConst       93   (-18)
+           992  CallFunction    3    
+
+109        994  LoadConst       68   (#ffffffff)
+
+110        997  LoadConst       91   (60000)
+
+107        1000 CallFunction    3    
+
+106        1002 CallFunction    1    
+           1004 Pop                  
+
+115        1005 LoadGlobal      85   (ppm_write_image)
+           1008 LoadGlobal      86   (width)
+           1011 LoadGlobal      87   (height)
+           1014 LoadGlobal      81   (ray_trace)
+           1017 CallFunction    3    
+           1019 Return               
+
+Disassembly of <func vec3, file "vec3.ql", line 2>
+2          0    LoadLocal       3    (z)
+           3    LoadLocal       2    (y)
+           6    LoadLocal       1    (x)
+           9    CreateArray     3    
+           11   Return               
+
+Disassembly of <func vec3_zero, file "vec3.ql", line 3>
+3          0    LoadConst       0    ([0, 0, 0])
+           3    Return               
+
+Disassembly of <func vec3_from_color, file "vec3.ql", line 4>
+4          0    LoadConst       0    (2)
+           3    LoadLocal       1    (c)
+           6    IndexGet             
+           7    LoadConst       1    (255)
+           10   BinaryDivide         (/)
+           11   LoadConst       2    (1)
+           14   LoadLocal       1    (c)
+           17   IndexGet             
+           18   LoadConst       1    (255)
+           21   BinaryDivide         (/)
+           22   LoadConst       3    (0)
+           25   LoadLocal       1    (c)
+           28   IndexGet             
+           29   LoadConst       1    (255)
+           32   BinaryDivide         (/)
+           33   CreateArray     3    
+           35   Return               
+
+Disassembly of <func vec3_to_color, file "vec3.ql", line 5>
+5          0    LoadConst       0    (0)
+           3    LoadLocal       1    (v)
+           6    IndexGet             
+           7    LoadConst       1    (1)
+           10   LoadLocal       1    (v)
+           13   IndexGet             
+           14   LoadConst       2    (2)
+           17   LoadLocal       1    (v)
+           20   IndexGet             
+           21   CallBuiltin     3    (<builtin rgb>)
+           25   Return               
+
+Disassembly of <func vec3_add, file "vec3.ql", line 8>
+8          0    LoadConst       0    (2)
+           3    LoadLocal       1    (v1)
+           6    IndexGet             
+           7    LoadConst       0    (2)
+           10   LoadLocal       2    (v2)
+           13   IndexGet             
+           14   BinaryAdd            (+)
+           15   LoadConst       1    (1)
+           18   LoadLocal       1    (v1)
+           21   IndexGet             
+           22   LoadConst       1    (1)
+           25   LoadLocal       2    (v2)
+           28   IndexGet             
+           29   BinaryAdd            (+)
+           30   LoadConst       2    (0)
+           33   LoadLocal       1    (v1)
+           36   IndexGet             
+           37   LoadConst       2    (0)
+           40   LoadLocal       2    (v2)
+           43   IndexGet             
+           44   BinaryAdd            (+)
+           45   CreateArray     3    
+           47   Return               
+
+Disassembly of <func vec3_sub, file "vec3.ql", line 9>
+9          0    LoadConst       0    (2)
+           3    LoadLocal       1    (v1)
+           6    IndexGet             
+           7    LoadConst       0    (2)
+           10   LoadLocal       2    (v2)
+           13   IndexGet             
+           14   BinarySubtract       (-)
+           15   LoadConst       1    (1)
+           18   LoadLocal       1    (v1)
+           21   IndexGet             
+           22   LoadConst       1    (1)
+           25   LoadLocal       2    (v2)
+           28   IndexGet             
+           29   BinarySubtract       (-)
+           30   LoadConst       2    (0)
+           33   LoadLocal       1    (v1)
+           36   IndexGet             
+           37   LoadConst       2    (0)
+           40   LoadLocal       2    (v2)
+           43   IndexGet             
+           44   BinarySubtract       (-)
+           45   CreateArray     3    
+           47   Return               
+
+Disassembly of <func vec3_mul, file "vec3.ql", line 10>
+10         0    LoadConst       0    (2)
+           3    LoadLocal       1    (v1)
+           6    IndexGet             
+           7    LoadConst       0    (2)
+           10   LoadLocal       2    (v2)
+           13   IndexGet             
+           14   BinaryMultiply       (*)
+           15   LoadConst       1    (1)
+           18   LoadLocal       1    (v1)
+           21   IndexGet             
+           22   LoadConst       1    (1)
+           25   LoadLocal       2    (v2)
+           28   IndexGet             
+           29   BinaryMultiply       (*)
+           30   LoadConst       2    (0)
+           33   LoadLocal       1    (v1)
+           36   IndexGet             
+           37   LoadConst       2    (0)
+           40   LoadLocal       2    (v2)
+           43   IndexGet             
+           44   BinaryMultiply       (*)
+           45   CreateArray     3    
+           47   Return               
+
+Disassembly of <func vec3_div, file "vec3.ql", line 11>
+11         0    LoadConst       0    (2)
+           3    LoadLocal       1    (v1)
+           6    IndexGet             
+           7    LoadConst       0    (2)
+           10   LoadLocal       2    (v2)
+           13   IndexGet             
+           14   BinaryDivide         (/)
+           15   LoadConst       1    (1)
+           18   LoadLocal       1    (v1)
+           21   IndexGet             
+           22   LoadConst       1    (1)
+           25   LoadLocal       2    (v2)
+           28   IndexGet             
+           29   BinaryDivide         (/)
+           30   LoadConst       2    (0)
+           33   LoadLocal       1    (v1)
+           36   IndexGet             
+           37   LoadConst       2    (0)
+           40   LoadLocal       2    (v2)
+           43   IndexGet             
+           44   BinaryDivide         (/)
+           45   CreateArray     3    
+           47   Return               
+
+Disassembly of <func vec3_neg, file "vec3.ql", line 12>
+12         0    LoadConst       0    (2)
+           3    LoadLocal       1    (v)
+           6    IndexGet             
+           7    UnaryNegate          (-)
+           8    LoadConst       1    (1)
+           11   LoadLocal       1    (v)
+           14   IndexGet             
+           15   UnaryNegate          (-)
+           16   LoadConst       2    (0)
+           19   LoadLocal       1    (v)
+           22   IndexGet             
+           23   UnaryNegate          (-)
+           24   CreateArray     3    
+           26   Return               
+
+Disassembly of <func vec3_add_scalar, file "vec3.ql", line 14>
+14         0    LoadConst       0    (2)
+           3    LoadLocal       1    (v)
+           6    IndexGet             
+           7    LoadLocal       2    (s)
+           10   BinaryAdd            (+)
+           11   LoadConst       1    (1)
+           14   LoadLocal       1    (v)
+           17   IndexGet             
+           18   LoadLocal       2    (s)
+           21   BinaryAdd            (+)
+           22   LoadConst       2    (0)
+           25   LoadLocal       1    (v)
+           28   IndexGet             
+           29   LoadLocal       2    (s)
+           32   BinaryAdd            (+)
+           33   CreateArray     3    
+           35   Return               
+
+Disassembly of <func vec3_mul_scalar, file "vec3.ql", line 15>
+15         0    LoadConst       0    (2)
+           3    LoadLocal       1    (v)
+           6    IndexGet             
+           7    LoadLocal       2    (s)
+           10   BinaryMultiply       (*)
+           11   LoadConst       1    (1)
+           14   LoadLocal       1    (v)
+           17   IndexGet             
+           18   LoadLocal       2    (s)
+           21   BinaryMultiply       (*)
+           22   LoadConst       2    (0)
+           25   LoadLocal       1    (v)
+           28   IndexGet             
+           29   LoadLocal       2    (s)
+           32   BinaryMultiply       (*)
+           33   CreateArray     3    
+           35   Return               
+
+Disassembly of <func vec3_dot, file "vec3.ql", line 19>
+19         0    LoadConst       0    (0)
+           3    LoadLocal       1    (v1)
+           6    IndexGet             
+           7    LoadConst       0    (0)
+           10   LoadLocal       2    (v2)
+           13   IndexGet             
+           14   BinaryMultiply       (*)
+           15   LoadConst       1    (1)
+           18   LoadLocal       1    (v1)
+           21   IndexGet             
+           22   LoadConst       1    (1)
+           25   LoadLocal       2    (v2)
+           28   IndexGet             
+           29   BinaryMultiply       (*)
+           30   BinaryAdd            (+)
+           31   LoadConst       2    (2)
+           34   LoadLocal       1    (v1)
+           37   IndexGet             
+           38   LoadConst       2    (2)
+           41   LoadLocal       2    (v2)
+           44   IndexGet             
+           45   BinaryMultiply       (*)
+           46   BinaryAdd            (+)
+           47   Return               
+
+Disassembly of <func vec3_norm, file "vec3.ql", line 21>
+21         0    LoadConst       0    (0)
+           3    LoadLocal       1    (v)
+           6    IndexGet             
+           7    LoadConst       0    (0)
+           10   LoadLocal       1    (v)
+           13   IndexGet             
+           14   BinaryMultiply       (*)
+           15   LoadConst       1    (1)
+           18   LoadLocal       1    (v)
+           21   IndexGet             
+           22   LoadConst       1    (1)
+           25   LoadLocal       1    (v)
+           28   IndexGet             
+           29   BinaryMultiply       (*)
+           30   BinaryAdd            (+)
+           31   LoadConst       2    (2)
+           34   LoadLocal       1    (v)
+           37   IndexGet             
+           38   LoadConst       2    (2)
+           41   LoadLocal       1    (v)
+           44   IndexGet             
+           45   BinaryMultiply       (*)
+           46   BinaryAdd            (+)
+           47   Return               
+
+Disassembly of <func vec3_length, file "vec3.ql", line 22>
+22         0    LoadGlobal      16   (vec3_norm)
+           3    LoadLocal       1    (v)
+           6    CallFunction    1    
+           8    CallBuiltin     1    (<builtin sqrt>)
+           12   Return               
+
+Disassembly of <func vec3_normalize, file "vec3.ql", line 23>
+24         0    LoadGlobal      18   (vec3_length)
+           3    LoadLocal       1    (v)
+           6    CallFunction    1    
+           8    SetLocal        2    (len)
+
+25         11   LoadConst       0    (2)
+           14   LoadLocal       1    (v)
+           17   IndexGet             
+           18   LoadLocal       2    (len)
+           21   BinaryDivide         (/)
+           22   LoadConst       1    (1)
+           25   LoadLocal       1    (v)
+           28   IndexGet             
+           29   LoadLocal       2    (len)
+           32   BinaryDivide         (/)
+           33   LoadConst       2    (0)
+           36   LoadLocal       1    (v)
+           39   IndexGet             
+           40   LoadLocal       2    (len)
+           43   BinaryDivide         (/)
+           44   CreateArray     3    
+           46   Return               
+
+Disassembly of <func ray, file "ray.ql", line 6>
+7          0    LoadLocal       1    (origin)
+           3    LoadLocal       2    (direction)
+           6    CreatePair           
+           7    Return               
+
+Disassembly of <func to_rad, file "ray.ql", line 10>
+11         0    LoadLocal       1    (deg)
+           3    LoadGlobal      0    (PI)
+           6    BinaryMultiply       (*)
+           7    LoadConst       0    (180)
+           10   BinaryDivide         (/)
+           11   Return               
+
+Disassembly of <func prime_ray, file "ray.ql", line 14>
+15         0    LoadLocal       3    (w)
+           3    LoadLocal       4    (h)
+           6    BinaryDivide         (/)
+           7    SetLocal        7    (aspect)
+
+17         10   LoadLocal       1    (x)
+           13   LoadConst       0    (0.5)
+           16   BinaryAdd            (+)
+           17   LoadLocal       3    (w)
+           20   BinaryDivide         (/)
+           21   LoadConst       1    (2)
+           24   BinaryMultiply       (*)
+           25   LoadConst       2    (1)
+           28   BinarySubtract       (-)
+           29   LoadLocal       7    (aspect)
+           32   BinaryMultiply       (*)
+           33   LoadLocal       6    (fov)
+           36   BinaryMultiply       (*)
+           37   SetLocal        8    (prime_x)
+
+18         40   LoadConst       2    (1)
+           43   LoadLocal       2    (y)
+           46   LoadConst       0    (0.5)
+           49   BinaryAdd            (+)
+           50   LoadLocal       4    (h)
+           53   BinaryDivide         (/)
+           54   LoadConst       1    (2)
+           57   BinaryMultiply       (*)
+           58   BinarySubtract       (-)
+           59   LoadLocal       6    (fov)
+           62   BinaryMultiply       (*)
+           63   SetLocal        9    (prime_y)
+
+20         66   LoadGlobal      19   (vec3_normalize)
+           69   LoadGlobal      3    (vec3)
+           72   LoadLocal       8    (prime_x)
+           75   LoadLocal       9    (prime_y)
+           78   LoadConst       3    (-1)
+           81   CallFunction    3    
+           83   CallFunction    1    
+           85   SetLocal        10   (direction)
+
+22         88   LoadLocal       5    (pos)
+           91   LoadLocal       10   (direction)
+           94   CreatePair           
+           95   Return               
+
+Disassembly of <func ray_at, file "ray.ql", line 25>
+26         0    LoadGlobal      8    (vec3_add)
+           3    LoadGlobal      20   (RAY_ORIGIN)
+           6    LoadLocal       1    (ray)
+           9    IndexGet             
+           10   LoadGlobal      14   (vec3_mul_scalar)
+           13   LoadGlobal      21   (RAY_DIRECTION)
+           16   LoadLocal       1    (ray)
+           19   IndexGet             
+           20   LoadLocal       2    (t)
+           23   CallFunction    2    
+           25   CallFunction    2    
+           27   Return               
+
+Disassembly of <func ray_reflection, file "ray.ql", line 29>
+30         0    LoadGlobal      8    (vec3_add)
+           3    LoadLocal       3    (point)
+           6    LoadGlobal      14   (vec3_mul_scalar)
+           9    LoadLocal       1    (normal)
+           12   LoadLocal       4    (bias)
+           15   CallFunction    2    
+           17   CallFunction    2    
+           19   SetLocal        5    (origin)
+
+31         22   LoadGlobal      9    (vec3_sub)
+           25   LoadLocal       2    (incident)
+           28   LoadGlobal      14   (vec3_mul_scalar)
+           31   LoadLocal       1    (normal)
+           34   LoadConst       0    (2)
+           37   LoadGlobal      15   (vec3_dot)
+           40   LoadLocal       2    (incident)
+           43   LoadLocal       1    (normal)
+           46   CallFunction    2    
+           48   BinaryMultiply       (*)
+           49   CallFunction    2    
+           51   CallFunction    2    
+           53   SetLocal        6    (direction)
+
+32         56   LoadLocal       5    (origin)
+           59   LoadLocal       6    (direction)
+           62   CreatePair           
+           63   Return               
+
+Disassembly of <func material, file "material.ql", line 5>
+6          0    LoadGlobal      5    (vec3_from_color)
+           3    LoadLocal       1    (color)
+           6    CallFunction    1    
+           8    SetLocal        6    (c)
+
+7          11   LoadLocal       5    (phong_ks)
+           14   LoadLocal       4    (phong_n)
+           17   LoadLocal       6    (c)
+           20   LoadLocal       3    (reflectivity)
+           23   LoadLocal       2    (albedo)
+           26   CreateArray     5    
+           28   Return               
+
+Disassembly of <func shiny_material, file "material.ql", line 10>
+11         0    LoadGlobal      32   (material)
+           3    LoadLocal       1    (color)
+           6    LoadLocal       2    (albedo)
+           9    LoadLocal       3    (reflectivity)
+           12   LoadConst       0    (1250)
+           15   LoadConst       1    (0.2)
+           18   CallFunction    5    
+           20   Return               
+
+Disassembly of <func matte_material, file "material.ql", line 14>
+15         0    LoadGlobal      32   (material)
+           3    LoadLocal       1    (color)
+           6    LoadLocal       2    (albedo)
+           9    LoadConst       0    (0)
+           12   LoadConst       0    (0)
+           15   LoadConst       0    (0)
+           18   CallFunction    5    
+           20   Return               
+
+Disassembly of <func sphere, file "object.ql", line 12>
+13         0    LoadLocal       3    (material)
+           3    LoadLocal       2    (radius)
+           6    LoadLocal       1    (origin)
+           9    LoadGlobal      40   (SPHERE)
+           12   CreateArray     4    
+           14   Return               
+
+Disassembly of <func plane, file "object.ql", line 16>
+17         0    LoadLocal       3    (material)
+           3    LoadLocal       2    (normal)
+           6    LoadLocal       1    (origin)
+           9    LoadGlobal      41   (PLANE)
+           12   CreateArray     4    
+           14   Return               
+
+Disassembly of <func object_surface_normal, file "object.ql", line 20>
+21         0    LoadNone             (none)
+           1    LoadGlobal      35   (OBJ_TYPE)
+           4    LoadLocal       1    (obj)
+           7    IndexGet             
+
+22         8    LoadGlobal      40   (SPHERE)
+           11   JumpIfNotEq     26   >> 40
+           14   PopMany         2    
+
+23         17   LoadGlobal      19   (vec3_normalize)
+           20   LoadGlobal      9    (vec3_sub)
+           23   LoadLocal       2    (point)
+           26   LoadGlobal      36   (OBJ_ORIGIN)
+           29   LoadLocal       1    (obj)
+           32   IndexGet             
+           33   CallFunction    2    
+           35   CallFunction    1    
+
+22         37   JumpForward     25   >> 65
+
+25     >>  40   LoadGlobal      41   (PLANE)
+           43   JumpIfNotEq     18   >> 64
+           46   PopMany         2    
+
+26         49   LoadGlobal      12   (vec3_neg)
+           52   LoadGlobal      37   (OBJ_NORMAL)
+           55   LoadLocal       1    (obj)
+           58   IndexGet             
+           59   CallFunction    1    
+
+25         61   JumpForward     1    >> 65
+
+21     >>  64   Pop                  
+       >>  65   Return               
+
+Disassembly of <func object_intersection, file "object.ql", line 31>
+32         0    LoadNone             (none)
+           1    LoadGlobal      35   (OBJ_TYPE)
+           4    LoadLocal       1    (obj)
+           7    IndexGet             
+
+33         8    LoadGlobal      40   (SPHERE)
+           11   JumpIfNotEq     218  >> 232
+           14   PopMany         2    
+
+34         17   LoadGlobal      9    (vec3_sub)
+           20   LoadGlobal      36   (OBJ_ORIGIN)
+           23   LoadLocal       1    (obj)
+           26   IndexGet             
+           27   LoadGlobal      20   (RAY_ORIGIN)
+           30   LoadLocal       2    (ray)
+           33   IndexGet             
+           34   CallFunction    2    
+           36   SetLocal        3    (line)
+
+35         39   LoadGlobal      15   (vec3_dot)
+           42   LoadLocal       3    (line)
+           45   LoadGlobal      21   (RAY_DIRECTION)
+           48   LoadLocal       2    (ray)
+           51   IndexGet             
+           52   CallFunction    2    
+           54   SetLocal        4    (adjacent)
+
+36         57   LoadGlobal      16   (vec3_norm)
+           60   LoadLocal       3    (line)
+           63   CallFunction    1    
+       >>  65   LoadLocal       4    (adjacent)
+           68   LoadLocal       4    (adjacent)
+           71   BinaryMultiply       (*)
+           72   BinarySubtract       (-)
+           73   SetLocal        5    (distance)
+
+38         76   LoadGlobal      38   (OBJ_RADIUS)
+           79   LoadLocal       1    (obj)
+           82   IndexGet             
+           83   LoadGlobal      38   (OBJ_RADIUS)
+           86   LoadLocal       1    (obj)
+           89   IndexGet             
+           90   BinaryMultiply       (*)
+           91   SetLocal        6    (radius)
+
+40         94   LoadNone             (none)
+           95   LoadLocal       5    (distance)
+           98   LoadLocal       6    (radius)
+           101  BinaryGreater        (>)
+           102  JumpIfFalse     14   >> 119
+           105  PopMany         2    
+
+41         108  LoadGlobal      2    (INF)
+           111  LoadConst       0    (false)
+           114  CreatePair           
+           115  Return               
+
+40         116  JumpForward     1    >> 120
+       >>  119  Pop                  
+       >>  120  Pop                  
+
+44         121  LoadLocal       6    (radius)
+           124  LoadLocal       5    (distance)
+           127  BinarySubtract       (-)
+           128  CallBuiltin     1    (<builtin sqrt>)
+           132  SetLocal        7    (bounds)
+
+45         135  LoadLocal       4    (adjacent)
+           138  LoadLocal       7    (bounds)
+           141  BinarySubtract       (-)
+           142  SetLocal        8    (t1)
+
+46         145  LoadLocal       4    (adjacent)
+           148  LoadLocal       7    (bounds)
+           151  BinaryAdd            (+)
+           152  SetLocal        9    (t2)
+
+48         155  LoadNone             (none)
+           156  LoadLocal       8    (t1)
+           159  LoadConst       1    (0)
+           162  BinaryLess           (<)
+           163  LoadLocal       9    (t2)
+           166  LoadConst       1    (0)
+           169  BinaryLess           (<)
+           170  BinaryAnd            (&&)
+           171  JumpIfFalse     14   >> 188
+           174  PopMany         2    
+
+49         177  LoadGlobal      2    (INF)
+           180  LoadConst       0    (false)
+           183  CreatePair           
+           184  Return               
+
+48         185  JumpForward     1    >> 189
+       >>  188  Pop                  
+       >>  189  Pop                  
+
+52         190  LoadNone             (none)
+           191  LoadLocal       8    (t1)
+           194  LoadLocal       9    (t2)
+           197  BinaryLess           (<)
+           198  JumpIfFalse     13   >> 214
+           201  PopMany         2    
+
+53         204  LoadLocal       8    (t1)
+           207  LoadConst       2    (true)
+           210  CreatePair           
+
+52         211  JumpForward     10   >> 224
+       >>  214  PopMany         2    
+
+55         217  LoadLocal       9    (t2)
+           220  LoadConst       2    (true)
+           223  CreatePair           
+
+52     >>  224  BlockResult          
+           225  PopMany         7    
+           228  BlockReturn          
+
+33         229  JumpForward     144  >> 376
+
+58     >>  232  LoadGlobal      41   (PLANE)
+           235  JumpIfNotEq     137  >> 375
+           238  PopMany         2    
+
+59         241  LoadGlobal      37   (OBJ_NORMAL)
+           244  LoadLocal       1    (obj)
+           247  IndexGet             
+           248  SetLocal        3    (line)
+
+60         251  LoadGlobal      15   (vec3_dot)
+           254  LoadLocal       3    (line)
+           257  LoadGlobal      21   (RAY_DIRECTION)
+           260  LoadLocal       2    (ray)
+           263  IndexGet             
+           264  CallFunction    2    
+           266  SetLocal        4    (adjacent)
+
+62         269  LoadNone             (none)
+           270  LoadLocal       4    (adjacent)
+           273  LoadGlobal      1    (EPSILON)
+           276  BinaryGreater        (>)
+           277  JumpIfFalse     77   >> 357
+           280  PopMany         2    
+
+63         283  LoadGlobal      9    (vec3_sub)
+           286  LoadGlobal      36   (OBJ_ORIGIN)
+           289  LoadLocal       1    (obj)
+           292  IndexGet             
+           293  LoadGlobal      20   (RAY_ORIGIN)
+           296  LoadLocal       2    (ray)
+           299  IndexGet             
+           300  CallFunction    2    
+           302  SetLocal        5    (distance)
+
+64         305  LoadGlobal      15   (vec3_dot)
+           308  LoadLocal       5    (distance)
+           311  LoadLocal       3    (line)
+           314  CallFunction    2    
+           316  LoadLocal       4    (adjacent)
+           319  BinaryDivide         (/)
+           320  SetLocal        6    (radius)
+
+65         323  LoadNone             (none)
+           324  LoadLocal       6    (radius)
+           327  LoadConst       1    (0)
+           330  BinaryGreaterEqual      (>=)
+           331  JumpIfFalse     14   >> 348
+           334  PopMany         2    
+
+66         337  LoadLocal       6    (radius)
+           340  LoadConst       2    (true)
+           343  CreatePair           
+           344  Return               
+
+65         345  JumpForward     1    >> 349
+       >>  348  Pop                  
+       >>  349  BlockResult          
+           350  PopMany         2    
+           353  BlockReturn          
+
+62         354  JumpForward     1    >> 358
+       >>  357  Pop                  
+       >>  358  Pop                  
+
+70         359  LoadGlobal      2    (INF)
+           362  LoadConst       0    (false)
+           365  CreatePair           
+           366  Return               
+           367  BlockResult          
+           368  PopMany         2    
+           371  BlockReturn          
+
+58         372  JumpForward     1    >> 376
+
+32     >>  375  Pop                  
+       >>  376  Return               
+
+Disassembly of <func directional_light, file "light.ql", line 10>
+11         0    LoadGlobal      19   (vec3_normalize)
+           3    LoadLocal       1    (direction)
+           6    CallFunction    1    
+           8    SetLocal        4    (direction)
+
+12         11   LoadGlobal      5    (vec3_from_color)
+           14   LoadLocal       2    (color)
+           17   CallFunction    1    
+           19   SetLocal        5    (color)
+
+13         22   LoadLocal       3    (intensity)
+           25   LoadLocal       5    (color)
+           28   LoadLocal       4    (direction)
+           31   LoadGlobal      51   (DIRECTIONAL)
+           34   CreateArray     4    
+           36   Return               
+
+Disassembly of <func spherical_light, file "light.ql", line 16>
+17         0    LoadGlobal      5    (vec3_from_color)
+           3    LoadLocal       2    (color)
+           6    CallFunction    1    
+           8    SetLocal        4    (color)
+
+18         11   LoadLocal       3    (radius)
+           14   LoadLocal       4    (color)
+           17   LoadLocal       1    (position)
+           20   LoadGlobal      52   (SPHERICAL)
+           23   CreateArray     4    
+           25   Return               
+
+Disassembly of <func light_relative_direction, file "light.ql", line 21>
+22         0    LoadNone             (none)
+           1    LoadGlobal      46   (LIGHT_TYPE)
+           4    LoadLocal       1    (light)
+           7    IndexGet             
+
+23         8    LoadGlobal      51   (DIRECTIONAL)
+           11   JumpIfNotEq     13   >> 27
+           14   PopMany         2    
+
+24         17   LoadGlobal      47   (LIGHT_DIRECTION)
+           20   LoadLocal       1    (light)
+           23   IndexGet             
+
+23         24   JumpForward     33   >> 60
+
+26     >>  27   LoadGlobal      52   (SPHERICAL)
+           30   JumpIfNotEq     26   >> 59
+           33   PopMany         2    
+
+27         36   LoadGlobal      19   (vec3_normalize)
+           39   LoadGlobal      9    (vec3_sub)
+           42   LoadGlobal      48   (LIGHT_POSITION)
+           45   LoadLocal       1    (light)
+           48   IndexGet             
+           49   LoadLocal       2    (point)
+           52   CallFunction    2    
+           54   CallFunction    1    
+
+26         56   JumpForward     1    >> 60
+
+22     >>  59   Pop                  
+       >>  60   Return               
+
+Disassembly of <func light_intensity_at, file "light.ql", line 32>
+33         0    LoadNone             (none)
+           1    LoadGlobal      46   (LIGHT_TYPE)
+           4    LoadLocal       1    (light)
+           7    IndexGet             
+
+34         8    LoadGlobal      51   (DIRECTIONAL)
+           11   JumpIfNotEq     13   >> 27
+           14   PopMany         2    
+
+35         17   LoadGlobal      50   (LIGHT_INTENSITY)
+           20   LoadLocal       1    (light)
+           23   IndexGet             
+
+34         24   JumpForward     58   >> 85
+
+37     >>  27   LoadGlobal      52   (SPHERICAL)
+           30   JumpIfNotEq     51   >> 84
+           33   PopMany         2    
+
+38         36   LoadGlobal      16   (vec3_norm)
+           39   LoadGlobal      9    (vec3_sub)
+           42   LoadGlobal      48   (LIGHT_POSITION)
+           45   LoadLocal       1    (light)
+           48   IndexGet             
+           49   LoadLocal       2    (point)
+           52   CallFunction    2    
+           54   CallFunction    1    
+           56   SetLocal        3    (r2)
+
+39         59   LoadGlobal      50   (LIGHT_INTENSITY)
+           62   LoadLocal       1    (light)
+           65   IndexGet             
+           66   LoadConst       0    (4)
+           69   LoadGlobal      0    (PI)
+           72   BinaryMultiply       (*)
+           73   LoadLocal       3    (r2)
+           76   BinaryMultiply       (*)
+           77   BinaryDivide         (/)
+           78   BlockResult          
+           79   Pop                  
+           80   BlockReturn          
+
+37         81   JumpForward     1    >> 85
+
+33     >>  84   Pop                  
+       >>  85   Return               
+
+Disassembly of <func light_relative_distance, file "light.ql", line 44>
+45         0    LoadNone             (none)
+           1    LoadGlobal      46   (LIGHT_TYPE)
+           4    LoadLocal       1    (light)
+           7    IndexGet             
+
+46         8    LoadGlobal      51   (DIRECTIONAL)
+           11   JumpIfNotEq     9    >> 23
+           14   PopMany         2    
+
+47         17   LoadGlobal      2    (INF)
+
+46         20   JumpForward     33   >> 56
+
+49     >>  23   LoadGlobal      52   (SPHERICAL)
+           26   JumpIfNotEq     26   >> 55
+           29   PopMany         2    
+
+50         32   LoadGlobal      18   (vec3_length)
+           35   LoadGlobal      9    (vec3_sub)
+           38   LoadGlobal      48   (LIGHT_POSITION)
+           41   LoadLocal       1    (light)
+           44   IndexGet             
+           45   LoadLocal       2    (point)
+           48   CallFunction    2    
+           50   CallFunction    1    
+
+49         52   JumpForward     1    >> 56
+
+45     >>  55   Pop                  
+       >>  56   Return               
+
+Disassembly of <func set_dimensions, file "scene.ql", line 12>
+13         0    LoadLocal       1    (width)
+           3    CallBuiltin     1    (<builtin float>)
+           7    SetGlobal       58   (WIDTH)
+           10   Pop                  
+
+14         11   LoadLocal       2    (height)
+           14   CallBuiltin     1    (<builtin float>)
+           18   SetGlobal       59   (HEIGHT)
+           21   Return               
+
+Disassembly of <func set_fov, file "scene.ql", line 17>
+18         0    LoadGlobal      23   (to_rad)
+           3    LoadLocal       1    (fov)
+           6    CallFunction    1    
+           8    LoadConst       0    (2)
+           11   BinaryDivide         (/)
+           12   CallBuiltin     1    (<builtin tan>)
+           16   SetGlobal       61   (FOV)
+           19   Return               
+
+Disassembly of <func set_camera_position, file "scene.ql", line 21>
+22         0    LoadLocal       1    (position)
+           3    SetGlobal       62   (CAMERA_POSITION)
+           6    Return               
+
+Disassembly of <func set_max_depth, file "scene.ql", line 25>
+26         0    LoadLocal       1    (depth)
+           3    CallBuiltin     1    (<builtin int>)
+           7    SetGlobal       63   (MAX_DEPTH)
+           10   Return               
+
+Disassembly of <func set_shadow_bias, file "scene.ql", line 29>
+30         0    LoadLocal       1    (bias)
+           3    SetGlobal       64   (SHADOW_BIAS)
+           6    Return               
+
+Disassembly of <func add_object, file "scene.ql", line 33>
+34         0    LoadLocal       1    (object)
+           3    CreateArray     1    
+           5    LoadGlobal      65   (OBJECTS)
+           8    BinaryJoin           (..)
+           9    SetGlobal       65   (OBJECTS)
+           12   Return               
+
+Disassembly of <func add_light, file "scene.ql", line 37>
+38         0    LoadLocal       1    (light)
+           3    CreateArray     1    
+           5    LoadGlobal      66   (LIGHTS)
+           8    BinaryJoin           (..)
+           9    SetGlobal       66   (LIGHTS)
+           12   Return               
+
+Disassembly of <func trace, file "rendering.ql", line 3>
+4          0    LoadGlobal      2    (INF)
+           3    SetLocal        2    (t)
+
+5          6    LoadNone             (none)
+           7    SetLocal        3    (obj)
+
+7          10   NewLoopCtx           
+           11   LoadGlobal      65   (OBJECTS)
+           14   LoadNone             (none)
+           15   IterNext        67   >> 85
+           18   SwapPop              
+
+8          19   LoadGlobal      45   (object_intersection)
+           22   LoadLocal       6    (object)
+           25   LoadLocal       1    (ray)
+           28   CallFunction    2    
+           30   Unpack          2    
+
+9          32   LoadNone             (none)
+           33   LoadLocal       7    (hit)
+           36   JumpIfFalse     37   >> 76
+           39   PopMany         2    
+
+10         42   LoadNone             (none)
+           43   LoadLocal       8    (curr_t)
+           46   LoadLocal       2    (t)
+           49   BinaryLess           (<)
+           50   JumpIfFalse     12   >> 65
+           53   PopMany         2    
+
+11     >>  56   LoadLocal       8    (curr_t)
+           59   SetLocal        2    (t)
+
+10         62   JumpForward     1    >> 66
+       >>  65   Pop                  
+       >>  66   Pop                  
+
+13         67   LoadLocal       6    (object)
+           70   SetLocal        3    (obj)
+
+9          73   JumpForward     1    >> 77
+       >>  76   Pop                  
+
+7      >>  77   BlockResult          
+           78   PopMany         3    
+           81   BlockReturn          
+           82   JumpBackward    70   << 15
+       >>  85   BlockResult          
+           86   PopMany         2    
+           89   BlockReturn          
+           90   Pop                  
+
+17         91   LoadLocal       2    (t)
+           94   LoadLocal       3    (obj)
+           97   CreatePair           
+           98   Return               
+
+Disassembly of <func cast, file "rendering.ql", line 20>
+21         0    LoadNone             (none)
+           1    LoadLocal       2    (depth)
+           4    LoadGlobal      63   (MAX_DEPTH)
+           7    BinaryGreaterEqual      (>=)
+           8    JumpIfFalse     10   >> 21
+           11   PopMany         2    
+
+22         14   LoadConst       0    ([0, 0, 0])
+           17   Return               
+
+21         18   JumpForward     1    >> 22
+       >>  21   Pop                  
+       >>  22   Pop                  
+
+25         23   LoadGlobal      76   (trace)
+           26   LoadLocal       1    (ray)
+           29   CallFunction    1    
+           31   Unpack          2    
+
+26         33   LoadNone             (none)
+           34   LoadLocal       3    (obj)
+           37   LoadNone             (none)
+           38   BinaryEqual          (==)
+           39   JumpIfFalse     10   >> 52
+           42   PopMany         2    
+
+27         45   LoadConst       0    ([0, 0, 0])
+           48   Return               
+
+26         49   JumpForward     1    >> 53
+       >>  52   Pop                  
+       >>  53   Pop                  
+
+30         54   LoadGlobal      77   (compute_color)
+           57   LoadLocal       1    (ray)
+       >>  60   LoadLocal       4    (t)
+           63   LoadLocal       3    (obj)
+           66   LoadLocal       2    (depth)
+           69   CallFunction    4    
+           71   Return               
+
+Disassembly of <func diffuse_shading, file "rendering.ql", line 33>
+34         0    LoadConst       0    ([0, 0, 0])
+           3    SetLocal        4    (diffuse_color)
+
+35         6    LoadConst       0    ([0, 0, 0])
+           9    SetLocal        5    (specular_highlight)
+
+37         12   LoadGlobal      27   (MAT_ALBEDO)
+       >>  15   LoadLocal       1    (material)
+           18   IndexGet             
+           19   LoadGlobal      0    (PI)
+           22   BinaryDivide         (/)
+           23   SetLocal        6    (reflected)
+
+39         26   NewLoopCtx           
+           27   LoadGlobal      66   (LIGHTS)
+           30   LoadNone             (none)
+           31   IterNext        278  >> 312
+           34   SwapPop              
+
+40         35   LoadGlobal      55   (light_relative_direction)
+           38   LoadLocal       9    (light)
+           41   LoadLocal       2    (point)
+           44   CallFunction    2    
+           46   SetLocal        10   (light_dir)
+
+42         49   LoadGlobal      8    (vec3_add)
+           52   LoadLocal       2    (point)
+           55   LoadGlobal      14   (vec3_mul_scalar)
+           58   LoadLocal       3    (normal)
+           61   LoadGlobal      64   (SHADOW_BIAS)
+           64   CallFunction    2    
+           66   CallFunction    2    
+           68   SetLocal        11   (shadow_ray_origin)
+
+43         71   LoadGlobal      22   (ray)
+           74   LoadLocal       11   (shadow_ray_origin)
+           77   LoadLocal       10   (light_dir)
+           80   CallFunction    2    
+           82   SetLocal        12   (shadow_ray)
+
+45     >>  85   LoadGlobal      76   (trace)
+           88   LoadLocal       12   (shadow_ray)
+           91   CallFunction    1    
+           93   Unpack          2    
+
+47         95   LoadNone             (none)
+           96   LoadLocal       13   (obj)
+           99   LoadNone             (none)
+           100  BinaryEqual          (==)
+           101  LoadLocal       14   (shadow_t)
+           104  LoadGlobal      57   (light_relative_distance)
+           107  LoadLocal       9    (light)
+           110  LoadLocal       2    (point)
+           113  CallFunction    2    
+           115  BinaryGreater        (>)
+           116  BinaryOr             (||)
+           117  JumpIfFalse     17   >> 137
+           120  PopMany         2    
+
+48         123  LoadGlobal      56   (light_intensity_at)
+           126  LoadLocal       9    (light)
+           129  LoadLocal       2    (point)
+           132  CallFunction    2    
+
+47         134  JumpForward     6    >> 143
+       >>  137  PopMany         2    
+
+50         140  LoadConst       1    (0)
+
+47     >>  143  SetLocal        15   (intensity)
+
+53         146  LoadGlobal      15   (vec3_dot)
+           149  LoadLocal       3    (normal)
+           152  LoadLocal       10   (light_dir)
+           155  CallFunction    2    
+           157  LoadConst       1    (0)
+           160  CallBuiltin     2    (<builtin max>)
+           164  LoadLocal       15   (intensity)
+           167  BinaryMultiply       (*)
+           168  SetLocal        16   (power)
+
+55         171  LoadGlobal      8    (vec3_add)
+           174  LoadLocal       4    (diffuse_color)
+           177  LoadGlobal      14   (vec3_mul_scalar)
+           180  LoadGlobal      49   (LIGHT_COLOR)
+           183  LoadLocal       9    (light)
+           186  IndexGet             
+           187  LoadLocal       16   (power)
+           190  LoadLocal       6    (reflected)
+           193  BinaryMultiply       (*)
+           194  CallFunction    2    
+           196  CallFunction    2    
+           198  SetLocal        4    (diffuse_color)
+           201  Pop                  
+
+57         202  LoadGlobal      9    (vec3_sub)
+           205  LoadLocal       10   (light_dir)
+           208  LoadGlobal      14   (vec3_mul_scalar)
+           211  LoadLocal       3    (normal)
+           214  LoadGlobal      15   (vec3_dot)
+           217  LoadLocal       10   (light_dir)
+           220  LoadLocal       3    (normal)
+           223  CallFunction    2    
+           225  LoadConst       2    (2)
+           228  BinaryMultiply       (*)
+           229  CallFunction    2    
+           231  CallFunction    2    
+           233  SetLocal        17   (r)
+
+59         236  LoadLocal       15   (intensity)
+           239  LoadGlobal      15   (vec3_dot)
+           242  LoadLocal       17   (r)
+           245  LoadGlobal      12   (vec3_neg)
+           248  LoadLocal       10   (light_dir)
+           251  CallFunction    1    
+           253  CallFunction    2    
+           255  LoadConst       1    (0)
+           258  CallBuiltin     2    (<builtin max>)
+           262  LoadGlobal      30   (MAT_PHONG_N)
+           265  LoadLocal       1    (material)
+           268  IndexGet             
+           269  BinaryPower          (**)
+           270  LoadGlobal      31   (MAT_PHONG_KS)
+           273  LoadLocal       1    (material)
+           276  IndexGet             
+           277  BinaryMultiply       (*)
+           278  BinaryMultiply       (*)
+           279  SetLocal        18   (s)
+
+60         282  LoadGlobal      8    (vec3_add)
+           285  LoadLocal       5    (specular_highlight)
+           288  LoadLocal       18   (s)
+           291  LoadLocal       18   (s)
+           294  LoadLocal       18   (s)
+           297  CreateArray     3    
+           299  CallFunction    2    
+           301  SetLocal        5    (specular_highlight)
+
+39         304  BlockResult          
+           305  PopMany         10   
+           308  BlockReturn          
+           309  JumpBackward    281  << 31
+       >>  312  BlockResult          
+           313  PopMany         2    
+           316  BlockReturn          
+           317  Pop                  
+
+63         318  LoadGlobal      10   (vec3_mul)
+           321  LoadGlobal      29   (MAT_COLOR)
+           324  LoadLocal       1    (material)
+           327  IndexGet             
+           328  LoadGlobal      8    (vec3_add)
+           331  LoadLocal       4    (diffuse_color)
+           334  LoadLocal       5    (specular_highlight)
+           337  CallFunction    2    
+           339  CallFunction    2    
+           341  Return               
+
+Disassembly of <func compute_color, file "rendering.ql", line 66>
+68         0    LoadGlobal      25   (ray_at)
+           3    LoadLocal       1    (ray)
+           6    LoadLocal       2    (t)
+           9    CallFunction    2    
+           11   SetLocal        5    (point)
+
+69         14   LoadGlobal      44   (object_surface_normal)
+           17   LoadLocal       3    (object)
+           20   LoadLocal       5    (point)
+           23   CallFunction    2    
+           25   SetLocal        6    (normal)
+
+71         28   LoadGlobal      39   (OBJ_MATERIAL)
+       >>  31   LoadLocal       3    (object)
+           34   IndexGet             
+           35   SetLocal        7    (material)
+
+73         38   LoadGlobal      80   (diffuse_shading)
+           41   LoadLocal       7    (material)
+           44   LoadLocal       5    (point)
+           47   LoadLocal       6    (normal)
+           50   CallFunction    3    
+           52   SetLocal        8    (color)
+
+75         55   LoadGlobal      28   (MAT_REFLECTIVITY)
+           58   LoadLocal       7    (material)
+           61   IndexGet             
+           62   SetLocal        9    (reflection)
+
+76         65   LoadNone             (none)
+           66   LoadLocal       9    (reflection)
+           69   LoadConst       0    (0)
+           72   BinaryGreater        (>)
+           73   JumpIfFalse     94   >> 170
+           76   PopMany         2    
+
+77         79   LoadGlobal      26   (ray_reflection)
+           82   LoadLocal       6    (normal)
+           85   LoadGlobal      21   (RAY_DIRECTION)
+           88   LoadLocal       1    (ray)
+           91   IndexGet             
+           92   LoadLocal       5    (point)
+           95   LoadGlobal      64   (SHADOW_BIAS)
+           98   CallFunction    4    
+           100  SetLocal        10   (reflected_ray)
+
+78         103  LoadGlobal      78   (cast)
+           106  LoadLocal       10   (reflected_ray)
+           109  LoadLocal       4    (depth)
+           112  LoadConst       1    (1)
+           115  BinaryAdd            (+)
+           116  CallFunction    2    
+           118  SetLocal        11   (reflected_color)
+
+79         121  LoadGlobal      14   (vec3_mul_scalar)
+           124  LoadLocal       8    (color)
+           127  LoadConst       2    (1)
+           130  LoadLocal       9    (reflection)
+           133  BinarySubtract       (-)
+           134  CallFunction    2    
+           136  SetLocal        8    (color)
+           139  Pop                  
+
+80         140  LoadGlobal      8    (vec3_add)
+           143  LoadLocal       8    (color)
+           146  LoadGlobal      14   (vec3_mul_scalar)
+           149  LoadLocal       11   (reflected_color)
+           152  LoadLocal       9    (reflection)
+           155  CallFunction    2    
+           157  CallFunction    2    
+           159  SetLocal        8    (color)
+           162  BlockResult          
+           163  PopMany         2    
+           166  BlockReturn          
+
+76         167  JumpForward     1    >> 171
+       >>  170  Pop                  
+       >>  171  Pop                  
+
+85         172  LoadLocal       8    (color)
+           175  Return               
+
+Disassembly of <func ray_trace, file "rendering.ql", line 89>
+90         0    LoadGlobal      24   (prime_ray)
+           3    LoadLocal       1    (x)
+           6    LoadLocal       2    (y)
+           9    LoadGlobal      58   (WIDTH)
+           12   LoadGlobal      59   (HEIGHT)
+           15   LoadGlobal      62   (CAMERA_POSITION)
+           18   LoadGlobal      61   (FOV)
+           21   CallFunction    6    
+           23   SetLocal        3    (ray)
+
+91         26   LoadGlobal      7    (vec3_to_color)
+           29   LoadGlobal      78   (cast)
+           32   LoadLocal       3    (ray)
+           35   LoadConst       0    (0)
+           38   CallFunction    2    
+           40   CallFunction    1    
+           42   Return               
+
+Disassembly of <func ppm_write_header, file "ppm.ql", line 3>
+4          0    LoadConst       0    ("P3\n")
+
+5          3    LoadLocal       1    (width)
+
+4          6    BinaryJoin           (..)
+
+5          7    LoadConst       1    (" ")
+
+4          10   BinaryJoin           (..)
+
+5          11   LoadLocal       2    (height)
+
+4          14   BinaryJoin           (..)
+
+5          15   LoadConst       2    ("\n    255\n")
+
+4          18   BinaryJoin           (..)
+           19   CallBuiltin     1    (<builtin print>)
+           23   Return               
+
+Disassembly of <func ppm_write_pixel, file "ppm.ql", line 10>
+11         0    LoadConst       0    (0)
+           3    LoadLocal       1    (color)
+           6    IndexGet             
+           7    LoadConst       1    (" ")
+           10   BinaryJoin           (..)
+           11   LoadConst       2    (1)
+           14   LoadLocal       1    (color)
+           17   IndexGet             
+           18   BinaryJoin           (..)
+           19   LoadConst       1    (" ")
+           22   BinaryJoin           (..)
+           23   LoadConst       3    (2)
+           26   LoadLocal       1    (color)
+           29   IndexGet             
+           30   BinaryJoin           (..)
+           31   LoadConst       4    ("\n")
+           34   BinaryJoin           (..)
+           35   CallBuiltin     1    (<builtin print>)
+           39   Return               
+
+Disassembly of <func ppm_write_image, file "ppm.ql", line 15>
+15         0    LoadNone             (none)
+           1    Return               
+
