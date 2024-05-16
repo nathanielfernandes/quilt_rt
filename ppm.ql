@@ -13,10 +13,10 @@ fn ppm_write_pixel(color) {
 }
 
 fn ppm_write_image(width, height, f) {
-    // ppm_write_header(width, height)
-    // for y in 0:height {
-    //     for x in 0:width {
-    //         ppm_write_pixel(f(x, y))
-    //     }
-    // }
+    ppm_write_header(width, height)
+    for y in 0:height {
+        for x in 0:width {
+            ppm_write_pixel(f(x, y))
+        }
+    }
 }
